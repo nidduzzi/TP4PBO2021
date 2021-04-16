@@ -1,3 +1,4 @@
 # TP4PBO2021
- 
-Nothing here yet ⏳
+
+Ahmad Izzuddin 1908919 C2  
+run from `src/` folder  
