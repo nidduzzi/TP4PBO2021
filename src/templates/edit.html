@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+
+        <title>My Shoes Contest</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">My Shoes Contest</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+        <br />
+        <br />
+        DATA_WARNING
+        <div class="container-fluid">
+            <!-- FORM INPUT DATA BARU -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-3">"My Shoes" Contest Entry Form</h1>
+                    <p class="lead">Win a Forcefield of your own</p>
+                    <hr class="my-2" />
+                    <p>
+                        Want to trade in your old sneakers for a custom pair of
+                        Forcefields? Make a case for why your shoes have
+                        <i>got</i> to go and you may be one of ten lucky
+                        winners.
+                    </p>
+                </div>
+                <div class="container">
+                    <form action="index.php" method="POST">
+                        <fieldset>
+                            <legend>Contest Entry Information</legend>
+                            <input type="text" class="form-control d-none" name="id" id="id" value="DATA_ID">
+                            <ul>
+                                <div class="form-group">
+                                    <label for="name">Name: </label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="name"
+                                        id="name"
+                                        aria-describedby="nameHelp"
+                                        placeholder="John Doe"
+                                        required
+                                    />
+                                    <small
+                                        id="nameHelp"
+                                        class="form-text text-muted"
+                                        >Input Your full name</small
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        name="email"
+                                        id="email"
+                                        aria-describedby="emailHelp"
+                                        placeholder="example@mail.com"
+                                        required
+                                    />
+                                    <small
+                                        id="emailHelp"
+                                        class="form-text text-muted"
+                                        >Enter a valid email address</small
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number: </label>
+                                    <input
+                                        type="tel"
+                                        class="form-control form-control-sm"
+                                        name="phone"
+                                        id="phone"
+                                        aria-describedby="phoneHelp"
+                                        placeholder="0XXXXXXXXXXXXX"
+                                        required
+                                    />
+                                    <small
+                                        id="phoneHelp"
+                                        class="form-text text-muted"
+                                        >Enter an active phone number</small
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="reason"
+                                        >My shoes are SO old...</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        name="reason"
+                                        id="reason"
+                                        rows="3"
+                                        maxlength="300"
+                                        placeholder="No more than 300 characters long"
+                                        required
+                                    ></textarea>
+                                </div>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Custom Shoe Design</legend>
+                            <fieldset>
+                                <label>Color <i>(choose one)</i>:</label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            name="color"
+                                            id="red"
+                                            value="red"
+                                            required
+                                        />
+                                        Red
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            name="color"
+                                            id="blue"
+                                            value="blue"
+                                            required
+                                        />
+                                        Blue
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            name="color"
+                                            id="black"
+                                            value="black"
+                                            required
+                                        />
+                                        Black
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="radio"
+                                            class="form-check-input"
+                                            name="color"
+                                            id="silver"
+                                            value="silver"
+                                            required
+                                        />
+                                        Silver
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>
+                                    Features
+                                    <i>(Choose as many as you want)</i>
+                                </legend>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            name="s_laces"
+                                            id="s_laces"
+                                            value="1"
+                                        />
+                                        Sparkly Laces
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            name="m_logo"
+                                            id="m_logo"
+                                            value="1"
+                                        />
+                                        Metalic Logo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            name="l_up"
+                                            id="l_up"
+                                            value="1"
+                                        />
+                                        Light-up heels
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            name="mp3"
+                                            id="mp3"
+                                            value="1"
+                                        />
+                                        MP3 Enabled
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Size</legend>
+                                <div class="form-group">
+                                    <label for="size"
+                                        >Sizes reflect standard European Shoe
+                                        sizing</label
+                                    >
+                                    <select
+                                        class="form-control"
+                                        name="size"
+                                        id="size"
+                                        required
+                                    >
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </fieldset>
+                        <br />
+                        <button type="submit" name="edit" class="btn btn-primary">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-primary">
+                            Reset
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <br />
+
+        </div>
+        <script>
+            var tmp;
+            (function () {
+                "use strict";
+                window.addEventListener(
+                    "load",
+                    function () {
+                        var result = DATA_FORM;
+                        tmp = result;
+                        try {
+                            document.getElementById("name").value = result.ce_name;
+                            document.getElementById("email").value = result.ce_email;
+                            document.getElementById("phone").value = result.ce_phone;
+                            document.getElementById("reason").value = result.ce_reason;
+                            document.getElementById(result.ce_color).checked = true;
+                            document.getElementById("l_up").checked = (result.ce_l_up == 1);
+                            document.getElementById("m_logo").checked = (result.ce_m_logo == 1);
+                            document.getElementById("mp3").checked = (result.ce_mp3 == 1);
+                            document.getElementById("s_laces").checked = (result.ce_s_laces == 1);
+                            document.getElementById("size").value = result.ce_size;
+                        } catch (error) {
+                            console.log("failed to insert form data")
+                            console.log(error)
+                            console.log(result)
+                        }
+                    },
+                    false
+                );
+            })();
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
